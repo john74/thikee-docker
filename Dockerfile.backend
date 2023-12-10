@@ -1,0 +1,26 @@
+# Use an official Python runtime as a parent image
+FROM python:3.8.10
+
+# Set the working directory to /backend
+WORKDIR /backend
+
+# Copy the backend directory contents into the container at /backend
+COPY ./backend .
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Make port 8000 available to the world outside this container
+EXPOSE 8000
+
+# Define environment variable
+ENV SECRET_KEY=mOCVzkPrSF/PBbG/4IaBpFwadWOpdQwfAO+xJEiwQYg=
+ENV DEBUG=True
+
+# SIMPLE JWT
+ENV SIGNING_KEY=QGtlzdKqEEXYhh8WRyAmExQR/zkuhrfYSmqpHmjSYas=
+ENV ACCESS_TOKEN_LIFETIME=10
+ENV REFRESH_TOKEN_LIFETIME=2592000
+
+# Run app.py when the container launches
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

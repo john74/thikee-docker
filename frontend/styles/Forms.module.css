@@ -1,0 +1,127 @@
+.formContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #efefef;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formContainer > .form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    width: 22%;
+}
+
+.formContainer > .form > .closeButton {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 36px;
+    width: 36px;
+    cursor: pointer;
+}
+
+.formContainer > .form > .closeButton > svg {
+    fill: #98DBC6;
+}
+
+.formContainer > .form > .title {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.formContainer .fields {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+}
+
+.formContainer .field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.formContainer .field.row {
+    flex-direction: row;
+}
+
+.formContainer [type="checkbox"] {
+    align-items: center;
+    margin-left: 5px;
+}
+
+.formContainer .dropdown,
+.formContainer .field > .input {
+    border-radius: 5px;
+    border: 1px solid var(--gray-1);
+    background-color: var(--gray-2);
+}
+
+.formContainer [type="submit"] {
+    background-color: #98DBC6;
+}
+
+.formContainer .label {
+    font-size: 14px;
+}
+
+.formContainer .dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.formContainer .dropdown > svg {
+    width: 15px;
+    height: 15px;
+}
+
+.formContainer .menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #efefef;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    row-gap: 5px;
+    position: absolute;
+    top: 40px;
+    border-radius: 5px;
+    left: 0;
+    min-width: 175px;
+    padding: 10px;
+    z-index: 10;
+}
+
+.formContainer .menu > li {
+    cursor: pointer;
+}
+
+.formContainer .menu > li:hover {
+    color: #2ac885;
+}
+
+.formContainer .authOptions {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.formContainer .authOptions > .text {
+    margin-right: 5px;
+}
+
+.formContainer .authOptions > .link {
+    color: var(--green-2);
+    font-weight: bold;
+}

@@ -1,0 +1,25 @@
+# Use an official Node runtime as a parent image
+FROM node:20.10.0
+
+# Set the working directory to /frontend
+WORKDIR /frontend
+
+# Copy the frontend directory contents into the container at /frontend
+COPY ./frontend .
+
+# Install any needed packages
+RUN npm install
+
+# Make port 3000 available to the world outside this container
+EXPOSE 3000
+
+#NEXTAUTH
+ENV NEXTAUTH_SECRET=dK+YVTrJSEaz4cLzaVL6Ms4lFlcnFrQDsSskwiQnt2o=
+ENV NEXTAUTH_URL=http://localhost:3000
+ENV NODE_ENV=development
+
+# DJANGO
+ENV BACKEND_URL=http://backend:8000
+
+# Run npm start when the container launches
+CMD ["npm", "run", "dev"]

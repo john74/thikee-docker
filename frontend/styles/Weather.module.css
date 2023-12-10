@@ -1,0 +1,178 @@
+.weather {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 6px;
+    width: 100%;
+    z-index: 1000;
+    margin-bottom: 30px;
+    min-height: 134px;
+}
+
+.weather > .data {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6px;
+    width: 100%;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 10px;
+}
+
+.action {
+    text-align: center;
+    cursor: pointer;
+    min-width: 81px;
+}
+
+.action:hover {
+    color: #2ac885;
+}
+
+.extraInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2E3440;
+    color: #efefef;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.extraInfo > .info {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    gap: 3px;
+}
+
+.extraInfo .label {
+    font-weight: bold;
+}
+
+.currentData {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-width: 550px;
+}
+
+.currentData > .group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.currentData > .time {
+    min-width: 50px;
+    justify-content: center;
+}
+
+.currentData .weekDay,
+.currentData .hour,
+.currentData .degrees {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.weekly,
+.hourly {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weekly > :not(:first-child),
+.hourly > :not(:first-child) {
+    border-left: 1px solid #2e344042;
+    padding-left: 10px;
+}
+
+.hourly > .forecast,
+.weekly > .forecast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-size: 11px;
+}
+
+.hourly > .forecast {
+    gap: 4px;
+}
+
+.weekly > .forecast {
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.weekly .top,
+.weekly .bottom {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.weekly .top {
+    font-weight: bold;
+}
+
+.weekly .top .month {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.weekDay,
+.hours {
+    font-weight: bold;
+}
+
+.restForecasts {
+    position: absolute;
+    top: 29%;
+    display: none;
+    align-items: center;
+    gap: 5px;
+    background-color: #2E3440;
+    color: #efefef;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.forecast:hover > .restForecasts {
+    display: flex;
+}
+
+.restForecasts > :not(:first-child) {
+    border-left: 1px solid #efefef;
+    padding-left: 10px;
+}
+
+.restForecasts > .forecast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-width: 75px;
+    font-size: 10px;
+    width: max-content;
+    gap: 5px;
+    padding: 5px;
+}
+
+.weather .message {
+    font-size: 21px;
+    opacity: .3;
+}

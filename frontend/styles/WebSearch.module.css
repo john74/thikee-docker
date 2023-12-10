@@ -1,0 +1,201 @@
+.enginesSelect {
+    display: flex;
+    align-items: center;
+    left: 10px;
+}
+
+.searchEngines {
+    position: absolute;
+    left: 10px;
+    border-radius: 5px;
+    background-color: #98DBC6;
+    width: 14%;
+    max-width: 14%;
+}
+
+.nonDefaultEngines {
+    display: flex;
+    flex-direction: column;
+    background-color: #efefef;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    row-gap: 8px;
+    position: absolute;
+    top: 40px;
+    border-radius: 4px;
+    left: 0;
+    min-width: 150px;
+}
+
+.nonDefaultEngines:not(.open) {
+    display: none;
+}
+
+.nonDefaultEngines > .engine:hover > span {
+    color: #2ac885;
+}
+
+.defaultEngine {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6px 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.defaultEngine > p {
+    font-size: 10px;
+}
+
+.defaultEngine > svg {
+    width: 14px;
+    height: 14px;
+    margin-left: 3px;
+}
+
+.webSearch form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 40%;
+}
+
+
+
+/* NEW */
+.webSearch {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.searchBar > [type="search"] {
+    height: 45px;
+    width: 100%;
+    padding-left: 123px;
+    padding-right: 39px;
+    font-size: 15px;
+    letter-spacing: .4px;
+}
+
+.addEngine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 50%;
+    position: absolute;
+    right: 7px;
+    cursor: pointer;
+}
+
+.nonDefaultEngines {
+    display: flex;
+    flex-direction: column;
+    background-color: #efefef;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    row-gap: 5px;
+    position: absolute;
+    top: 40px;
+    border-radius: 5px;
+    left: 0;
+    min-width: 175px;
+    padding: 10px;
+}
+
+.nonDefaultEngines > .engine {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 13px;
+    width: 100%;
+}
+
+.engine {
+    position: relative;
+}
+
+.engine > .name {
+    padding: 2px 0;
+    background-color: #efefef;
+    width: 88%;
+    z-index: 2;
+}
+
+.engine > .actions {
+    background-color: #efefef;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+
+.engine:hover > .actions {
+    opacity: 1;
+}
+
+.engine > .actions:hover {
+    z-index: 3;
+}
+
+.actions > .buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 87%;
+}
+
+.actions > .buttons > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 2px 9px;
+    border-radius: 5px;
+    flex: 1;
+    font-size: 13px;
+}
+
+.engine .buttons svg {
+    width: 14px;
+    height: 14px;
+}
+
+.buttons > .editButton {
+    background-color: #2ac885;
+}
+
+.buttons > .deleteButton {
+    background-color: #E74C3C;
+}
+
+.actions > .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13%;
+}
+
+.actions > .icon > svg {
+    width: 13px;
+    height: 13px;
+}
+
+.confirmButton {
+    background-color: #ff8000;
+    animation: countdown 5s linear;
+}

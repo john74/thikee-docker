@@ -1,0 +1,477 @@
+/* ======== Bookmark Category Groups ======== */
+.bookmarkCategoryGroups {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 38px;
+    width: 80%;
+    max-height: 270px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 2%;
+}
+
+.wrapper > .menu {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 11px;
+}
+
+.wrapper > .menu > span {
+    cursor: pointer;
+}
+
+.wrapper > .menu > span:hover {
+    color: #2ac885;
+}
+
+/* Firefox */
+.wrapper:hover {
+    scrollbar-width: thin;
+    scrollbar-color: #efefef;
+  }
+
+  /* Chrome, Edge and Safari */
+  .wrapper::-webkit-scrollbar {
+    height: 10px;
+    width: 2px;
+  }
+
+  .wrapper::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: transparent;
+  }
+
+  .wrapper:hover::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #efefef;
+  }
+
+  .wrapper::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
+
+  .wrapper:hover::-webkit-scrollbar-thumb {
+    background-color: #2E3440;
+  }
+
+/* ======== Categories Group ======== */
+
+.bookmarkCategoryGroup {
+    display: flex;
+    justify-content: stretch;
+    min-height: 270px;
+    max-height: 270px;
+}
+
+.bookmarkCategoryGroup > :not(:first-child) {
+    margin-left: 3%;
+}
+
+/* ======== Category ======== */
+.bookmarkCategory {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 14.2%;
+}
+
+/* ======== Category Head ======== */
+.head {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    color: #2E3440;
+    font-size: 16px;
+    padding: 3px;
+    width: 88.2%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.menuToggler {
+    display: flex;
+    height: 100%;
+    width: 11.8%;
+}
+
+.menuToggler > svg {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* ======== Category Body ======== */
+.bookmarks {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    height: 75%;
+    padding: 4px;
+    overflow-x: hidden;
+    background-color: #f9f9f9;
+}
+
+.bookmark {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+
+.bookmark > a {
+    display: flex;
+    color: #2E3440;
+    font-size: 13px;
+    overflow: hidden;
+    max-width: calc(100% - 30px);
+}
+
+.bookmark > a:hover {
+    color: #2ac885;
+}
+
+.noBookmarksMessage {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+  /* Chrome, Edge and Safari */
+  .bookmarks::-webkit-scrollbar {
+    height: 10px;
+    width: 2px;
+  }
+  .bookmarks::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: transparent;
+  }
+
+  .bookmarks:hover::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #efefef;
+  }
+
+  .bookmarks::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
+
+  .bookmarks:hover::-webkit-scrollbar-thumb {
+    background-color: #2E3440;
+  }
+
+.bookmark {
+    position: relative;
+}
+
+.bookmark > .name {
+    padding: 2px 0;
+    background-color: #f9f9f9;
+    width: 88%;
+    z-index: 2;
+}
+
+.bookmark > .actions {
+    background-color: #f9f9f9;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.bookmark:hover > .actions {
+    opacity: 1;
+}
+
+.bookmark > .actions:hover {
+    z-index: 3;
+}
+
+.bookmark > .actions > .buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 83%;
+}
+
+.bookmark > .actions > .buttons > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 2px 9px;
+    border-radius: 5px;
+    flex: 1;
+    font-size: 13px;
+}
+
+.bookmark > .actions > .buttons svg {
+    width: 14px;
+    height: 14px;
+}
+
+.bookmark .editButton {
+    background-color: #2ac885;
+}
+
+.bookmark .deleteButton {
+    background-color: #E74C3C;
+}
+
+.bookmark .confirmButton {
+    background-color: #ff8000;
+}
+
+.bookmark > .actions > .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17%;
+}
+
+.bookmark > .actions > .icon > svg {
+    width: 13px;
+    height: 13px;
+}
+
+/* ======== Subcategories ======== */
+.bookmarkSubCategories {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    max-height: 181px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.bookmarkSubCategory > .top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 88.6%;
+}
+
+.bookmarkSubCategory > .bookmarks {
+    position: absolute;
+    z-index: 3;
+    height: fit-content;
+    width: 86%;
+    border-radius: 5px;
+    background-color: #efefef;
+}
+
+.bookmarkSubCategory .bookmark > .name {
+    background-color: #efefef;
+}
+
+.bookmarkSubCategory .bookmark > .actions {
+    background-color: #efefef;
+    width: 98%;
+}
+
+.bookmarkSubCategory .subCategoryName {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    font-size: 13px;
+    width: 92%;
+    background-color: #f9f9f9;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.bookmarkSubCategory .subCategoryName:hover {
+    color: #2ac885;
+}
+
+.bookmarkSubCategory .actions {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    background-color: #f9f9f9;
+}
+
+.bookmarkSubCategory .actions:hover {
+    z-index: 3;
+}
+
+.bookmarkSubCategory .actions > .icon {
+    cursor: pointer;
+    opacity: 0;
+}
+
+.bookmarkSubCategory .bookmark:hover .actions > .icon,
+.bookmarkSubCategory .top:hover .actions > .icon {
+    opacity: 1;
+}
+
+.bookmarkSubCategory .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 94%;
+}
+
+.bookmarkSubCategory .buttons > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 2px 9px;
+    border-radius: 5px;
+    flex: 0;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.bookmarkSubCategory .editButton {
+    background-color: #2ac885;
+}
+
+.bookmarkSubCategory .deleteButton {
+    background-color: #E74C3C;
+}
+
+.bookmarkSubCategory .confirmButton {
+    background-color: #ff8000;
+}
+
+.bookmarkSubCategory  svg {
+    width: 13px;
+    height: 13px;
+}
+
+/* Firefox */
+.bookmarkSubCategories:hover {
+    scrollbar-width: thin;
+    scrollbar-color: #efefef;
+  }
+
+  /* Chrome, Edge and Safari */
+  .bookmarkSubCategories::-webkit-scrollbar {
+    height: 10px;
+    width: 2px;
+  }
+
+  .bookmarkSubCategories::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: transparent;
+  }
+
+  .bookmarkSubCategories:hover::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #efefef;
+  }
+
+  .bookmarkSubCategories::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
+
+  .bookmarkSubCategories:hover::-webkit-scrollbar-thumb {
+    background-color: #2E3440;
+  }
+
+/* ======== Category Menu ======== */
+.bookmarkCategory > .actions:not(.open) {
+    display: none;
+}
+
+.bookmarkCategory > .actions {
+    z-index: 2;
+    background-color: #efefef;
+    position: absolute;
+    top: 13%;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.bookmarkCategory > .actions > .action {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    justify-content: flex-start;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.bookmarkCategory > .actions > .action:hover {
+    color: #2ac885;
+}
+
+.bookmarkCategory > .actions > .action > svg {
+    height: 100%;
+    width: 15px;
+}
+
+/* ======== Empty Groups ======== */
+.message {
+    height: 270px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    color: #2e34402e;
+}
+
+.message > span {
+    color: #2ac885;
+    margin: 0 7px;
+    display: inline-flex;
+}
+
+/* ======== Animations ======== */
+
+@keyframes fillAnimation {
+    0% {
+      stroke-dashoffset: 48;
+      fill: transparent;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      fill: red; /* Change this to your desired fill color */
+    }
+  }
+
+  /* Define the emptying animation */
+  @keyframes emptyAnimation {
+    0% {
+      stroke-dashoffset: 0;
+      fill: red; /* Change this to your desired fill color */
+    }
+    100% {
+      stroke-dashoffset: 48;
+      fill: transparent;
+    }
+  }
+
+  /* Apply the animation to the SVG when it has the 'filling' class */
+  .markedForDeletion > svg path {
+    animation: fillAnimation 2s ease forwards;
+  }
+
+  /* Apply the animation to the SVG when it has the 'markedForDeletion' class */
+  .markedForDeletion > svg path {
+    animation: emptyAnimation 5s ease forwards;
+  }
